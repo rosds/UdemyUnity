@@ -15,6 +15,11 @@ public class MusicManager : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 	}
 
+	public void setVolume (float volume)
+	{
+		audioSource.volume = volume;
+	}
+
 	void OnLevelWasLoaded (int lvl)
 	{
 		Debug.Log("playing musing of level: " + levelMusicChangeArray [lvl]);
