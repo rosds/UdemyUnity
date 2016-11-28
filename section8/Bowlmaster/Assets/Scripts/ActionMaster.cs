@@ -31,7 +31,9 @@ public class ActionMaster {
 				if ((currentScore + pins == 10) && (bowl != 20)) {
 					return Action.EndTurn;
 				} else {
-					if ((currentScore + pins < 10) && (bowl == 20)) {
+					if (currentScore == 0) {
+						return Action.Tidy;
+					} else if ((currentScore + pins < 10) && (bowl == 20)) {
 						return Action.GameOver;
 					} else {
 						return Action.Reset;

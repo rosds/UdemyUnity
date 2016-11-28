@@ -96,4 +96,13 @@ public class ActionMasterTests
 		}
     	Assert.AreEqual(gameOver, actionMaster.Bowl(10));
     }
+
+    [Test]
+    public void T10Bowl10ThenA4ReturnsTidy ()
+	{
+		for (int i = 0; i < 10; i++) {
+			actionMaster.Bowl(10);
+		}
+    	Assert.AreEqual(tidy, actionMaster.Bowl(4));
+    }
 }
